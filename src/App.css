@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive table styles */
+.tableContainer {
+  width: 100%;
+  overflow-x: auto; /* Allows table to scroll horizontally on small screens */
+}
+
+/* Media queries for responsive tables */
+@media screen and (max-width: 768px) {
+  table {
+    width: 100%;
+    display: block; /* Block display to stack the table vertically on small screens */
+  }
+
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none; /* Hide the header on small screens for simplicity */
+  }
+
+  td {
+    padding: 10px; /* Increase padding for touch targets on mobile */
+    text-align: right; /* Align text to the right for consistency */
+  }
+
+  td:before {
+    content: attr(data-label); /* Use data-label attribute for pseudo-element before each cell */
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
